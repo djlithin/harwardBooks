@@ -44,7 +44,8 @@ class GetHarwardDataCommand extends Command
  
         $response = Http::get('https://api.lib.harvard.edu/v2/collections?limit=100');
         $data = $response->json();
-        Model::insert($data); // Eloquent approach
-        DB::table('table')->insert($data); // Query Builder approach
+        print_r($data);
+        // Model::insert($data); // Eloquent approach
+        // DB::table('table')->insert($data); // Query Builder approach
     }
 }
